@@ -1,0 +1,219 @@
+.container {
+    max-width: 960px;
+  }
+
+.list {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.dropdown-menu {
+  position: static;
+  display: block;
+  width: auto;
+  margin: 4rem auto;
+}
+
+.dropdown-menu-macos {
+  display: grid;
+  gap: .25rem;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+.dropdown-menu-macos .dropdown-item {
+  border-radius: .25rem;
+}
+
+.dropdown-item-danger {
+  color: var(--bs-red);
+}
+.dropdown-item-danger:hover,
+.dropdown-item-danger:focus {
+  color: #fff;
+  background-color: var(--bs-red);
+}
+.dropdown-item-danger.active {
+  background-color: var(--bs-red);
+}
+
+.btn-hover-light {
+  text-align: left;
+  background-color: var(--bs-white);
+  border-radius: .25rem;
+}
+.btn-hover-light:hover,
+.btn-hover-light:focus {
+  color: var(--bs-blue);
+  background-color: var(--bs-light);
+}
+
+.cal-month,
+.cal-days,
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+.cal-month-name {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  text-align: center;
+}
+.cal-weekday,
+.cal-btn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  padding: 0;
+}
+.cal-btn:not([disabled]) {
+  font-weight: 500;
+}
+.cal-btn:hover,
+.cal-btn:focus {
+  background-color: rgba(0, 0, 0, .05);
+}
+.cal-btn[disabled] {
+  opacity: .5;
+}
+
+.form-control-dark {
+  background-color: rgba(255, 255, 255, .05);
+  border-color: rgba(255, 255, 255, .15);
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+.btn-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .65);
+  background-color: transparent;
+  border: 0;
+}
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(0, 0, 0, .85);
+  background-color: #d2f4ea;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(0, 0, 0, .85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  display: inline-flex;
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+  text-decoration: none;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: #d2f4ea;
+}
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+.fw-semibold { font-weight: 600; }
+.lh-tight { line-height: 1.25; }
+
+body.modal-open .supreme-container{
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(3px);
+}

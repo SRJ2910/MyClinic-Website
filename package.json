@@ -1,0 +1,23 @@
+{
+  "name": "cs204-project",
+  "version": "1.0.0",
+  "description": "CS204 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashesh07/CS204-Project.git"
+  },
+  "author": "Yashesh Bhavsar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashesh07/CS204-Project/issues"
+  },
+  "homepage": "https://github.com/yashesh07/CS204-Project#readme",
+  "dependencies": {
+    "india-pincode-lookup": "^1.0.3",
+    "pincode": "^1.0.0"
+  }
+}
