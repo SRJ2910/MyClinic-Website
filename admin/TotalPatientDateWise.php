@@ -1,7 +1,7 @@
 <?php // LOOP TILL END OF DATA
 include_once 'ConnectionEST.php';
 $caller = new Connection();
-$result = $caller->estConnection("SELECT COUNT(*) FROM passenger WHERE gender='Female'; ");
+$result = $caller->estConnection("SELECT date_format(Time, '%d-%b-%Y') as Date,COUNT(*) as Total FROM patient GROUP BY date_format(Time, '%Y-%m-%d') ORDER BY Time DESC;");
 ?>
 
 
@@ -21,26 +21,24 @@ $result = $caller->estConnection("SELECT COUNT(*) FROM passenger WHERE gender='F
 <table class="table">
 <thead class="table-dark">
    <tr>
-       <th>Count</th>
+       <th>Date-Wise</th>
+       <th>Patient Count</th>
    </tr>
    
 </thead>
 <?php
 while ($rows = $result->fetch_assoc()) {
-    // echo $rows;
     ?>
     
         <tr>
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-            <td><?php echo $rows['COUNT(*)']; ?></td>
+            <td><?php echo $rows['Date']; ?></td>
+            <td><?php echo $rows['Total']; ?></td>
         </tr>
     <?php
     }
     ?>
-<tbody>
-  
-</tbody>
-</table>
+<tbody></table>
 
 </body>
 </html>

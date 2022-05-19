@@ -56,184 +56,53 @@
 
         <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white border supreme-container" style="width: 380px;">
             <a href="" class="d-flex align-items-center justify-content-between flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-                <span class="fs-5 fw-semibold">ADMIN PORTAL</span>
-                <span><button onclick="javascript: return false;" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#addTrainModal">Add train <i class="fa-solid fa-plus"></i></button></span>
+                <span class="fs-5 fw-semibold">Database</span>
             </a>
             <div class="list-group list-group-flush border-bottom scrollarea">
                 <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(0)" id="phpButton1">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">Patient Detail</strong>
+                        <strong class="mb-1">Patient Details</strong>
                         <!-- <small>Wed</small> -->
                     </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+                    <div class="col-10 mb-1 small">Good documentation promotes patient safety and quality of care.</div>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(1)" id="phpButton2">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET TRAIN DETAILS</strong>
+                        <strong class="mb-1">Total Patient</strong>
                         <!-- <small class="text-muted">Tues</small> -->
                     </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+                    <div class="col-10 mb-1 small">Patient count till date.</div>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(2)" id="phpButton3">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET PAYMENT DETAILS</strong>
+                        <strong class="mb-1">Date-Wise</strong>
                         <!-- <small class="text-muted">Mon</small> -->
                     </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+                    <div class="col-10 mb-1 small">Total patient sorted by date.</div>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(3)" id="phpButton4">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET TICKET DETAILS</strong>
+                        <strong class="mb-1">Month-Wise</strong>
                         <!-- <small class="text-muted">Wed</small> -->
                     </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+                    <div class="col-10 mb-1 small">Total patient sorted by month.</div>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(4)" id="phpButton5">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET PASSENGER DETAILS</strong>
+                        <strong class="mb-1">Year-Wise</strong>
                         <!-- <small class="text-muted">Tues</small> -->
                     </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+                    <div class="col-10 mb-1 small">Total patient sorted by year.</div>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(5)" id="phpButton6">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET ADULTS TRAVELLING</strong>
+                        <strong class="mb-1">Doctor-Wise</strong>
                         <!-- <small class="text-muted">Tues</small> -->
                     </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(6)" id="phpButton7">
-                    <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET CHILDREN TRAVELLING</strong>
-                        <!-- <small class="text-muted">Tues</small> -->
-                    </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(7)" id="phpButton8">
-                    <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET COUNT OF MALE TRAVELLING</strong>
-                        <!-- <small class="text-muted">Tues</small> -->
-                    </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(8)" id="phpButton9">
-                    <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">GET COUNT OF FEMALE TRAVELLING</strong>
-                        <!-- <small class="text-muted">Tues</small> -->
-                    </div>
-                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+                    <div class="col-10 mb-1 small">Total patient sorted by doctor.</div>
                 </a>
                 
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="addTrainModal" tabindex="-1" role="dialog" aria-labelledby="addTrainModalTitle" aria-hidden="true" data-bs-backdrop="false">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addTrainModalTitle">Train details</h5>
-                    <button data-bs-dismiss="modal">
-                    <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                <form action="insertTrain.php" method="post">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <label for="trainNumber"  class="form-label">Number</label>
-                            <input type="text" name="trainNumber" class="form-control" id="trainNumber" placeholder="" required>   
-                            <div class="invalid-feedback">
-                            Valid first train number is required.
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <label for="trainName"  class="form-label">Name</label>
-                            <input type="text" name="trainName" class="form-control" id="trainName" placeholder="" required>
-                            <div class="invalid-feedback">
-                            Valid train name is required.
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <label for="trainSource"  class="form-label">Source</label>
-                            <input type="text" name="trainSource" class="form-control" id="trainSource" placeholder="" required>
-                            <div class="invalid-feedback">
-                            Valid first train source is required.
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <label for="trainDestination"  class="form-label">Destination</label>
-                            <input type="text" name="trainDestination" class="form-control" id="trainDestination" placeholder="" required>
-                            <div class="invalid-feedback">
-                            Valid train destination is required.
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <label for="arrivalTime"  class="form-label">Arrival time</label>
-                            <div class="input-group has-validation">
-                            <input type="datetime-local" name="arrivalTime" class="form-control" id="arrivalTime" placeholder="">
-                            <div class="invalid-feedback">
-                                Valid arrival time is required.
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <label for="destinationTime"  class="form-label">Departure time</label>
-                            <div class="input-group has-validation">
-                            <input type="datetime-local" name="departureTime" class="form-control" id="destinationTime" placeholder="">
-                            <div class="invalid-feedback">
-                                Valid departure time is required.
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <label for="totalSeats"  class="form-label">Total seats</label>
-                            <div class="input-group has-validation">
-                            <input type="text" name="totalSeats" class="form-control" id="totalSeats" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Total seats are required.
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <label for="referenceDate" class="form-label">Reference date</label>
-                            <div class="input-group has-validation">
-                            <input type="date" name="referenceDate" class="form-control" id="referenceDate" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Valid date is required.
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <label for="amount"  class="form-label">Amount</label>
-                            <div class="input-group has-validation">
-                            <span class="input-group-text">₹</span>
-                            <input type="text" name="amount" class="form-control" id="amount" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Total amount is required.
-                            </div>
-                            </div>
-                        </div>
-
-                        <div style="height: 15px"></div>
-
-                        </div>
-
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button name="submitTrainDet"class="btn btn-primary">Add Train</button>
-                        </div>
-                    </form>
-                </div>
-                </div>
+                
             </div>
         </div>
 
@@ -243,34 +112,22 @@
             </div>
             <div class="queries" style="display: none;">
                 <?php 
-                    include 'TrainTable.php';
+                    include 'TotalPatient.php';
                 ?>
             </div>
             <div class="queries" style="display: none;">
-                <?php include "TicketTable.php";?>
+                <?php include "TotalPatientDateWise.php";?>
             </div>
             <div class="queries" style="display: none;">
-                <?php include 'PaymentTable.php';?>
-            </div>
-            <div class="queries" style="display: none;">
-                <?php 
-                include 'PassengerTable.php' ;?>
+                <?php include 'TotalPatientMonthWise.php';?>
             </div>
             <div class="queries" style="display: none;">
                 <?php 
-                include 'getAdult.php' ;?>
+                include 'TotalPatientYearWise.php' ;?>
             </div>
             <div class="queries" style="display: none;">
                 <?php 
-                include 'getChildren.php' ;?>
-            </div>
-            <div class="queries" style="display: none;">
-                <?php 
-                include 'getMaleCount.php' ;?>
-            </div>
-            <div class="queries" style="display: none;">
-                <?php 
-                include 'getFemaleCount.php' ;?>
+                include 'TotalPatientDoctorWise.php' ;?>
             </div>
         </div>
     </main>

@@ -49,7 +49,7 @@
     
 <main class="form-signin">
   <form action="adminLoginChk.php" method="POST">
-    <img class="mb-4" src="images/logo-transparent.png" alt="" width="300" height="90">
+    <img class="mb-4" src="images/icon.png" alt="" width="300" height="105">
     <h1 class="h3 mb-3 fw-normal">Administration</h1>
 
     <div class="form-floating">
@@ -66,7 +66,7 @@
     </div>
 
     <button class="w-100 btn btn-lg btn-primary" name="loginbutton">Log in</button>
-    <p class="mt-5 mb-3 text-muted">© 2020–2022 DOPA70-1</p>
+    <p class="mt-5 mb-3 text-muted">© 2022 Sumitra Polyclinic,<br> All rights reserved.</p>
   </form>
 </main>
 

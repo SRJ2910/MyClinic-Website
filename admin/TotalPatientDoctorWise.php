@@ -1,7 +1,7 @@
 <?php // LOOP TILL END OF DATA
 include_once 'ConnectionEST.php';
 $caller = new Connection();
-$result = $caller->estConnection("SELECT * FROM payment");
+$result = $caller->estConnection("SELECT DISTINCT SeenBy as Name, COUNT(*) as Total FROM patient GROUP BY SeenBy;");
 ?>
 
 
@@ -21,27 +21,19 @@ $result = $caller->estConnection("SELECT * FROM payment");
 <table class="table">
 <thead class="table-dark">
    <tr>
-       <th>Transaction ID</th>
-       <th>Passenger ID</th>
-       <th>PNR Number</th>
+       <th>Name</th>
+       <th>Patient Count</th>
    </tr>
    
 </thead>
 <?php
 while ($rows = $result->fetch_assoc()) {
-    // var_dump($rows)
     ?>
-        <!-- <?php
-
-            foreach($rows as $key => $value) {
-            echo $key;
-            }
-            ?> -->
+    
         <tr>
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-            <td><?php echo $rows['transaction_ID']; ?></td>
-            <td><?php echo $rows['passenger_ID']; ?></td>
-            <td><?php echo $rows['pnr_no']; ?></td>
+            <td><?php echo "Dr. ";echo $rows['Name']; ?></td>
+            <td><?php echo $rows['Total']; ?></td>
         </tr>
     <?php
     }

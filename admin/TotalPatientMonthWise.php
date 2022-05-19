@@ -1,7 +1,7 @@
 <?php // LOOP TILL END OF DATA
 include_once 'ConnectionEST.php';
 $caller = new Connection();
-$result = $caller->estConnection("SELECT * FROM passenger WHERE age>18 ");
+$result = $caller->estConnection("SELECT date_format(Time, '%b-%Y') as Month,COUNT(*) as Total FROM patient GROUP BY date_format(Time, '%Y-%m') ORDER BY Time DESC;");
 ?>
 
 
@@ -21,33 +21,25 @@ $result = $caller->estConnection("SELECT * FROM passenger WHERE age>18 ");
 <table class="table">
 <thead class="table-dark">
    <tr>
-       <th>Passenger ID</th>
-       <th>First Name</th>
-       <th>Last Name</th>
-       <th>Pincode</th>
-       <th>City</th>
-       <th>State</th>
-       <th>Date of Birth</th>
-       <th>Gender</th>
-       <th>Age</th>
+       <th>Month-Wise</th>
+       <th>Patient Count</th>
    </tr>
    
 </thead>
 <?php
 while ($rows = $result->fetch_assoc()) {
+    // var_dump($rows)
     ?>
-    
+        <!-- <?php
+
+            foreach($rows as $key => $value) {
+            echo $key;
+            }
+            ?> -->
         <tr>
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-            <td><?php echo $rows['passenger_ID']; ?></td>
-            <td><?php echo $rows['first_name']; ?></td>
-            <td><?php echo $rows['last_name']; ?></td>
-            <td><?php echo $rows['pincode']; ?></td>
-            <td><?php echo $rows['city']; ?></td>
-            <td><?php echo $rows['state']; ?></td>
-            <td><?php echo $rows['dob']; ?></td>
-            <td><?php echo $rows['gender']; ?></td>
-            <td><?php echo $rows['age']; ?></td>
+            <td><?php echo $rows['Month']; ?></td>
+            <td><?php echo $rows['Total']; ?></td>
         </tr>
     <?php
     }

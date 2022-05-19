@@ -67,44 +67,44 @@
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <!-- <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> -->
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="5000">
-      <img src="images/train2.jpg" class="d-block w-100" alt="Loading...">
+      <img src="images/med4.jpg" class="d-block w-100" alt="Loading...">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Choose your destiny.</h1>
+            <h1>Patience is the best medicine.</h1>
             <p>collect <strong>MOMENTS</strong> , not <strong>things</strong></p>
-            <p><a class="btn btn-lg btn-primary" href="#registration">Book Now</a></p>
+            <p><a class="btn btn-lg btn-primary" href="#registration">Register</a></p>
           </div>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="5000">
-      <img src="images/train1.jpg" class="d-block w-100" alt="Loading...">
+      <!-- <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/med1.jpg" class="d-block w-100" alt="Loading...">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
         <form action="userLogin.php" method="POST">
           <div class="container">
             <div class="carousel-caption">
-              <h1>The places you'll go.</h1>
+              <h1 style="color:black;">The places you'll go.</h1>
               <p>I'm thankful for this world, so I travel.</p>
               <p><a class="btn btn-lg btn-primary" href="userLogin.php">Generate Ticket</a></p>
             </div>
           </div>
         </form>
-      </div>
+      </div> -->
       <div class="carousel-item" data-bs-interval="5000">
-      <img src="images/train3.jpg" class="d-block w-100" alt="Loading...">
+      <img src="images/med5.jpg" class="d-block w-100" alt="Loading...">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
         <div class="container">
             <div class="carousel-caption text-end">
               <h1>Be a part of our community.</h1>
-              <p>Responsibility is accepting that you are the cause and the solution of the matter.</p>
+              <p>Never mind your happiness, do your duty.</p>
               <p><a class="btn btn-lg btn-primary" href="adminLogin.php">Join Us</a></p>
             </div>
           </div>
@@ -121,13 +121,13 @@
   </div>
   <div class="container">
     <main>
-      <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="images/logo.jpeg" alt="" width="450" height="150">
+      <div class="py-5 text-center" id="registration">
+        <img class="d-block mx-auto mb-4" src="images/icon.png" alt="" width="450" height="150">
         <h2>Registration Portal</h2>
         <p class="lead">To array a man's will against his sickness is the supreme art of medicine.</p>
       </div>
       <div class="row g-5">
-        <div class="col-md-7 col-lg-8" id="registration">
+        <div class="col-md-7 col-lg-8">
           <!-- <h4 class="mb-3">Doctor Details</h4> -->
           <form action="User/sendCompData.php" method="POST" id="registrationForm">
           <div class="col-sm-6">
@@ -166,7 +166,7 @@
 
               <div class="col-sm-6">
                 <label for="age" class="form-label">Age</label>
-                <input type="text" class="form-control" name="age" id="age" placeholder="" value="">
+                <input type="text" class="form-control" name="age" id="age" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid age is required.
                 </div>
@@ -193,7 +193,7 @@
               <div class="col-12">
                 <label for="username" class="form-label">Aadhar card</label>
                 <div class="input-group has-validation">
-                  <input type="text" class="form-control" name="aadhar"id="username" placeholder="xxxx xxxx xxxx" required>
+                  <input type="text" class="form-control" name="aadhar"id="username" placeholder="xxxx xxxx xxxx">
                   <div class="invalid-feedback">
                     Your username is required.
                   </div>
@@ -343,7 +343,7 @@
     </main>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">&copy; 2020–2022 DOPA70-1</p>
+      <p class="mb-1">&copy; 2022 Sumitra Polyclinic, All rights reserved.</p>
       <ul class="list-inline">
         <li class="list-inline-item"><a href="#">Privacy</a></li>
         <li class="list-inline-item"><a href="#">Terms</a></li>
